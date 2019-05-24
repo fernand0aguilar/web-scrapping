@@ -13,13 +13,13 @@ class ProductModelTest(TestCase):
     def test_title_content(self):
         print("Test Title Content")
         product = Product.objects.get(id=1)
-        expected_object_name = f'{product.title}'
+        expected_object_name = product.title
         self.assertEquals(expected_object_name, 'First Product')
 
     def test_url_content(self):
         print("Test URL Content")
         product = Product.objects.get(id=2)
-        expected_object_url = f'{product.url}'
+        expected_object_url = product.url
         self.assertEquals(expected_object_url, 'a url here')
 
     def test_price_content(self):
