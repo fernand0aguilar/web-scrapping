@@ -7,13 +7,13 @@ class App extends Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/');
+      const res = await fetch('http://localhost:8000/api/');
       const products = await res.json();
       this.setState({
         products
       });
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   }
 

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'api',
 ]
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
@@ -60,10 +61,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend.urls'
-
-CORS_ORIGIN_WHITELIST = (
-  'http://localhost:3000',
-  )
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {

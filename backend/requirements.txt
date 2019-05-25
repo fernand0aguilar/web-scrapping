@@ -1,5 +1,6 @@
 Django==2.2.1
 django-cors-headers==3.0.1
+django-cors-middleware
 django-filter==2.1.0
 djangorestframework==3.9.4
 pylint==1.8.4

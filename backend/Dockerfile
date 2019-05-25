@@ -11,5 +11,5 @@ RUN python manage.py makemigrations \
 
 RUN python manage.py test
 
+CMD ["python3", "manage.py", "runserver"]
 EXPOSE 8000
-CMD ["python", "manage.py", "runserver"]
