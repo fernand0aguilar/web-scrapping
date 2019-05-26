@@ -9,7 +9,9 @@ class ProductsPage extends Component {
     };
 
     componentDidMount = async () => {
-        const {products} = await getProducts();
+        const products = await getProducts().catch(error => {
+            console.log(error);
+        });        
         this.setState({
             products
         });

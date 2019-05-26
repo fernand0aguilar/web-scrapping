@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import Product from './Product';
 
-const ProductList = ({products}) => (
+const ProductList = ({products}) => (    
     <ul className="products">
         {
             products.map(product => (

@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Product = ({ Product }) => (
+const Product = ({ product }) => (
     <section className="Product-listing">
-        <h3 className="name">{Product.title}</h3>
+        <h3 className="name">{product.title}</h3>
         <section>
             <figure>
-                <img src={Product.url} alt={Product.title} />
+                <img src={product.url} alt={product.title} />
             </figure>
-            <p>{Product.price}</p>
+            <p>{product.price}</p>
         </section>
     </section>
 );

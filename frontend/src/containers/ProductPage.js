@@ -18,7 +18,9 @@ export class ProductPage extends Component{
 
     componentDidMount = async () => {
         const {id} = this.props.match.params;
-        const {product} = await getSingleProduct(id);
+        const product = await getSingleProduct(id).catch(error => {
+            console.log(error);
+        });        
         this.setState({
             product
         })
