@@ -7,7 +7,7 @@ const Product = ({ product }) => (
             <figure>
                 <img src={product.url} alt={product.title} />
             </figure>
-            <p>{product.price}</p>
+            <p>R${product.price}</p>
         </section>
     </section>
 );
