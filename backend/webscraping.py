@@ -29,7 +29,7 @@ try:
             priceNotFormated = price
 
         priceNotFormated = price.pop()
-        priceFormated = Decimal(sub(r'[^\d.]', '', priceNotFormated))
+        priceFormated = float(sub(r'[^\d.]', '', priceNotFormated))
         newProduct = Product(title=title, url=url, price=priceFormated)
         print("Created new product", newProduct)
         newProduct.save()

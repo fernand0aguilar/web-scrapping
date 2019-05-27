@@ -26,26 +26,31 @@ $ docker-compose build
 $ docker-compose up
 ```
 
-#### The hard way:
-```
-install python 3.6 on your machine
-install npm && pip
-cd frontend
-run $ npm install
-cd ../backend/
-run
-$ pip3 install -r requirements
-$ python manage.py makemigrations
-$ python manage.py migrate
-$ python manage.py runserver
-```
-***
-### Test
-python3 manage.py test
-
 if everything went right you should see a message like this.
+
 `Successfully tagged webscrapping_backend:latest`
 
 and later
 
 `Successfully tagged webscrapping_frontend:latest`
+
+#### The hard way:
+```
+install python 3.6 on your machine
+cd frontend
+$ yarn install
+
+cd ../backend/
+
+RUN
+$ pip3 install -r requirements
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
+$ python3 manage.py shell < webscraping.py
+$ python3 manage.py runserver
+```
+***
+### Test
+python3 manage.py test
+
+
